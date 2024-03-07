@@ -6,6 +6,10 @@ import { GetClass } from "../../../redux/actions/classactions";
 import { GET_DETAILS } from "../../../redux/actions/student/studentactions";
 import { Line } from '@ant-design/plots';
 import { Select } from "antd";
+import * as FaIcons from "react-icons/fa";
+import CardData from "../../common/DashboardCardData";
+import { useSelector } from "react-redux";
+
 
 function Statistics() {
   const dispatch = useDispatch();
@@ -21,6 +25,14 @@ function Statistics() {
   const [revenueDataYear, setRevenueDataYear] = useState([]);
   const [selectedDay, setSelectedDay] = useState("Day");
   const [selectedFilter, setSelectedFilter] = useState("UserCount");
+  
+
+
+  const { adminfilternotices } = useSelector((state) => state.admins);
+  const { grades } = useSelector((state) => state.classes);
+  const { teacherDetail } = useSelector((state) => state.teachers);
+  const { student } = useSelector((state) => state.students);
+  const adminnotices = adminfilternotices && adminfilternotices.results;
 
   useEffect(() => {
     dispatch(GetClass());
@@ -162,7 +174,44 @@ function Statistics() {
 
 
   return (
+    
     <div>
+      <InnerHeader icon={<MdIcons.MdDashboard />} name={"Dashboard"} />
+      <div className="main-content">
+      <div className="cardelement">
+          {student && (
+            <CardData
+              number={student.count}
+              name={"Students"}
+              icon={<FaIcons.FaUsers style={{ color: "#FFC36D" }} />}
+            />
+          )}
+
+          {
+            <CardData
+              number={teacherDetail?.count}
+              name={"Teachers"}
+              icon={
+                <FaIcons.FaChalkboardTeacher style={{ color: "#FF7676" }} />
+              }
+            />
+          }
+          {
+            <CardData
+              number={adminfilternotices?.count}
+              name={"Announcements"}
+              icon={<FaIcons.FaBullhorn style={{ color: "#009DDC" }} />}
+            />
+          }
+          {
+            <CardData
+              number={grades?.count}
+              name={"Classes"}
+              icon={<FaIcons.FaFile style={{ color: "#27AE60" }} />}
+            />
+          }
+        </div>
+        <div className="card-section">
       <InnerHeader icon={<MdIcons.MdDashboard />} name={"Dashboard"} />
       <div className="main-content">
         <div className="chart-section">
@@ -201,6 +250,8 @@ function Statistics() {
           </div>
         </div>
       </div>
+      </div>
+    </div>
     </div>
   );
 }

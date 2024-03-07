@@ -21,7 +21,7 @@ import Contact from "./assets/logo/contact.png";
 
 export default function LandingPage() {
     return (
-   
+
         <div>
             <Header />
             <HomeSection />
@@ -61,7 +61,7 @@ const Header = () => {
             <Link to="aboutUs" spy={true} smooth={true} duration={500} offset={-50} className="header-option">
                 About Us
             </Link>
-            <a href="/login"  className="login" >
+            <a href="/login" className="login" >
                 Login
             </a>
 
@@ -102,12 +102,11 @@ const PriceSection = () => {
                 <p>Buy packages now to experience the great utilities of ClassY </p>
                 <div className='price-cards'>
                     <div className='price-card'>
-                        <p className='price'><strong style={{ fontSize: "30px" }}>FREE</strong>/month</p>
+                        <p className='price'><strong style={{ fontSize: "30px" }}>TRIAL</strong></p>
                         <p className='sub-title'>You will be able to use all the features of the ClassY system </p>
                         <div className='functions'>
                             <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />All the features</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Free</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Only 1 class</p>
+                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />1 class / month</p>
                         </div>
                         <Link to="contact" spy={true} smooth={true} duration={500} offset={-50} className="btn-try">
                             Start Now
@@ -115,12 +114,14 @@ const PriceSection = () => {
                     </div>
 
                     <div className='price-card' style={{ backgroundColor: "rgba(93, 156, 89, 0.90)", color: "white" }}>
-                        <p className='price'><strong style={{ fontSize: "30px" }}>599k</strong>/month</p>
+                        <p className='price'><strong style={{ fontSize: "30px" }}>10$</strong></p>
+                        
                         <p className='sub-title'>You will be able to use all the features of the ClassY system</p>
                         <div className='functions'>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />All the features</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Unlimited storage capacity</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Only 1 class</p>
+                        <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />1 class / month</p>
+                        <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />All the features</p>
+                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Live support from ClassY</p>
+                           
                         </div>
                         <Link to="contact" spy={true} smooth={true} duration={500} offset={-50} className="btn-try" style={{ backgroundColor: "#DDF7E3", color: "black" }}>
                             Start Now
@@ -128,13 +129,12 @@ const PriceSection = () => {
                     </div>
 
                     <div className='price-card'>
-                        <p className='price'><strong style={{ fontSize: "30px" }}>1.999k</strong>/month</p>
+                        <p className='price'><strong style={{ fontSize: "30px" }}>79.99$</strong></p>
                         <p className='sub-title'>You will be able to use all the features of the ClassY system </p>
                         <div className='functions'>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />All the features</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Reasonable price than monthly</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Unlimited storage capacity</p>
-                            <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Only 1 class</p>
+                        <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Package 10 class / month</p>
+                        <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />All the features</p>
+                        <p className='function'><PlusCircleOutlined style={{ marginRight: "10px" }} />Live support from ClassY</p>
                         </div>
                         <Link to="contact" spy={true} smooth={true} duration={500} offset={-50} className="btn-try">
                             Start Now
@@ -361,14 +361,14 @@ const Footer = () => {
 
                 <div className='footer-right' >
                     <p className='footer-title'>CONTACT US</p>
-                    <ul style={{display:"flex", listStyleType:"none", fontSize:"40px"}}>
-                        <li style={{marginRight:"10px",textDecoration:"none", color: "#5D9C59"}}>
-                            <a  style={{textDecoration:"none", color: "#5D9C59"}} href='https://www.instagram.com/classyvietnam/'>
+                    <ul style={{ display: "flex", listStyleType: "none", fontSize: "40px" }}>
+                        <li style={{ marginRight: "10px", textDecoration: "none", color: "#5D9C59" }}>
+                            <a style={{ textDecoration: "none", color: "#5D9C59" }} href='https://www.instagram.com/classyvietnam/'>
                                 <InstagramFilled />
                             </a>
                         </li>
                         <li>
-                            <a  style={{textDecoration:"none", color: "#5D9C59"}}  href='www.facebook.com/classyedu'>
+                            <a style={{ textDecoration: "none", color: "#5D9C59" }} href='www.facebook.com/classyedu'>
                                 <FacebookFilled />
                             </a>
                         </li>

@@ -6,7 +6,7 @@ const menuadminValue = [
     name: "Dashboard",
     hasSubMenu: false,
     icon: <MdIcons.MdDashboard />,
-    to: "/admin/dashboard",
+    to: "/admin/statistics",
   },
   {
     name: "Student",
@@ -129,12 +129,12 @@ const menuadminValue = [
     icon: <FaIcons.FaBullhorn />,
     to: "/admin/announcements/create",
   },
-  {
-    name: "Statistics",
-    hasSubMenu: false,
-    icon: <MdIcons.MdPieChart />,
-    to: "admin/statistics",
-  },
+  // {
+  //   name: "Statistics",
+  //   hasSubMenu: false,
+  //   icon: <MdIcons.MdPieChart />,
+  //   to: "admin/statistics",
+  // },
 ];
 
 const menuTeacherValue = [
