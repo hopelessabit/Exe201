@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const a = "http://fptcloud07.fptu2024.meu-solutions.com/";
-export const baseURL = a+"api/";
+export const baseURL = "http://fptcloud07.fptu2024.meu-solutions.com/api/";
 const customAxios = (contentType) => {
   const axiosInstance = axios.create({
-    baseURL: baseURL,
+    baseURL: "/api/",
     timeout: 10000,
     headers: {
       Authorization: localStorage.getItem("access_token")
@@ -31,7 +30,7 @@ const customAxios = (contentType) => {
 
       if (
         error.response.status === 401 &&
-        originalRequest.url === baseURL + "token/refresh/"
+        originalRequest.url === "/api/" + "token/refresh/"
       ) {
         window.location.href = "/login/";
         return Promise.reject(error);
