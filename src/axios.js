@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const baseURL = "http://fptcloud07.fptu2024.meu-solutions.com/api/";
+const a = "http://fptcloud07.fptu2024.meu-solutions.com/";
+export const baseURL = a+"api/";
 const customAxios = (contentType) => {
   const axiosInstance = axios.create({
     baseURL: baseURL,
