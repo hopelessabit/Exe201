@@ -1,7 +1,6 @@
 import axios from "axios";
 
-export const baseURL = "http://127.0.0.1:8000/api/";
-
+export const baseURL = "http://fptcloud07.fptu2024.meu-solutions.com/api/";
 const customAxios = (contentType) => {
   const axiosInstance = axios.create({
     baseURL: baseURL,
